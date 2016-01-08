@@ -13,32 +13,30 @@ public class ChristmasTree {
 		Tortoise.move(200);
 		Tortoise.penDown();
 		//Tortoise.setPenColor(PenColors.Yellows.Gold);
-		
+		Tortoise.setAngle(306);
 		
 		//Star
-		/*Tortoise.setAngle(90);
 		for(int i = 1; i < 6; i ++)
 		{
 			Tortoise.turn(144);
 			Tortoise.move(25);
-		}*/
+		}
 		
 		Tortoise.setPenColor(PenColors.Grays.Black);
-		Tortoise.turn(120);
-		Tortoise.move(25);
+		//Tortoise.turn(120);
+		//Tortoise.move(25);
 		
-		for(int i = 1; i < 3; i++)
+		/*for(int i = 1; i < 3; i++)
 		{
-			/*int extension = i*5;
+			int extension = i*5;
 			Tortoise.move(50+extension);
 			Tortoise.turn(135);
 			Tortoise.move(25);
 			Tortoise.turn(-135);
-			*/
-			Tortoise.turn(135);
-			Tortoise.move(25+i*10);
-		}
-		
+			
+			//Tortoise.turn(135);
+			//Tortoise.move(25+i*10);
+		}*/
 		//15+20+25+30+35+40+45
 		
 		
