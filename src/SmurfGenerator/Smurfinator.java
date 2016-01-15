@@ -17,7 +17,7 @@ public class Smurfinator {
 		System.out.println(smurfette.getName());
 		System.out.println(smurfette.getHatColor());
 		System.out.println(smurfette.isGirlOrBoy());
-		String[] alphabet = new String[26];
+		String[] alphabet = new String[27];
 		alphabet[0] = "a";
 		alphabet[1] = "b";
 		alphabet[2] = "c";
@@ -44,7 +44,11 @@ public class Smurfinator {
 		alphabet[23] = "x";
 		alphabet[24] = "y";
 		alphabet[25] = "z";
-		int nameLength = new Random().nextInt(20);
+		alphabet[26] = " ";
+		
+		String[] randomAlphabet = new String[27];
+		int nameLength = new Random().nextInt(1000);
+		System.out.println("");
 		String randomName = "";
 		for(int i = 0; i < nameLength; i++)
 		{
