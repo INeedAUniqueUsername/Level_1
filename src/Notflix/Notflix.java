@@ -1,3 +1,4 @@
+package Notflix;
 import java.util.Random;
 
 //Paste the code below into 2 classes called Movie and NetflixQueue.
@@ -35,12 +36,12 @@ public class Notflix {
 		}
 		queue.printMovies();
 		
-		for(int i = 1; i < 6; i++)
+		for(int i = 1; i < 5; i++)
 		{
 			System.out.println("Movie number " + i + " is... " + queue.getMovie(i));
-			System.out.println("It costs " + queue.getMovie(i).getTicketPrice() + " dollars.");
+			System.out.println(queue.getMovie(i).getTicketPrice());
 			speak("Movie number " + i + " is... " + queue.getMovie(i));
-			speak("It costs " + queue.getMovie(i).getTicketPrice() + " dollars.");
+			speak(queue.getMovie(i).getTicketPrice());
 
 		}
 		
