@@ -66,9 +66,9 @@ public class Jukebox implements Runnable, ActionListener {
 		songs[1] = new Song("patrick.wav");
 		songs[2] = new Song("squidward.wav");
 		
-		songs[0].setDuration(seconds);
-		songs[1].setDuration(seconds);
-		songs[2].setDuration(seconds);
+		songs[0].setDuration(2);
+		songs[1].setDuration(2);
+		songs[2].setDuration(2);
 		
 		for (int i = 0; i < buttons.length; i++) {
 			buttons[i].addActionListener(this);

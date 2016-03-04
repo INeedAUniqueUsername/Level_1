@@ -1,4 +1,4 @@
-class HauntedHouse _
+/*class HauntedHouse _
 
 	int skeletons;
 	int name;
@@ -24,3 +24,4 @@ HauntedHouse.isSpooky(666);
 }
 
 _
+*/
