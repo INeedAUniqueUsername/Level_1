@@ -2,9 +2,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URI;
 import java.net.URL;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class CutenessTV implements MouseListener {
 	//Make a user interface with 3 buttons that will play different videos depending on which button is clicked. Use the methods below to play the cutest videos ever.
@@ -14,6 +16,8 @@ public class CutenessTV implements MouseListener {
 		CutenessTV tv = new CutenessTV();
 	}
 	
+	JFrame frame;
+	JPanel panel;
 	JButton ducks;
 	JButton frog;
 	JButton unicorn;
@@ -21,27 +25,30 @@ public class CutenessTV implements MouseListener {
 	
 	public CutenessTV()
 	{
-		JFrame frame = new JFrame();
+		frame = new JFrame();
+		panel = new JPanel();
 		ducks = new JButton();
-		ducks.setText("Ducks!");
-		
 		frog = new JButton();
-		frog.setText("Frog!");
-		
 		unicorn = new JButton();
+		ducks.setText("Ducks!");
+		frog.setText("Frog!");
 		unicorn.setText("Unicorn!");
 		
 		ducks.addMouseListener(this);
 		frog.addMouseListener(this);
 		unicorn.addMouseListener(this);
+		panel.addMouseListener(this);
+		frame.addMouseListener(this);
 		
-		frame.add(ducks);
-		frame.add(frog);
-		frame.add(unicorn);
-		
+		panel.add(ducks);
+		panel.add(frog);
+		panel.add(unicorn);
+		frame.add(panel);
 		frame.pack();
 		frame.setVisible(true);
-		frame.addMouseListener(this);
+		ducks.setVisible(true);
+		frog.setVisible(true);
+		unicorn.setVisible(true);
 	}
 	
 	void showDucks() {
@@ -68,10 +75,19 @@ public class CutenessTV implements MouseListener {
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			// TODO Auto-generated method stub
+			if(e.getSource().equals(ducks))
+			{
+				showDucks();
+			}
+			if(e.getSource().equals(frog))
+			{
+				showFrog();
+			}
 			if(e.getSource().equals(unicorn))
 			{
 				showFluffyUnicorns();
 			}
+			System.exit(new Random().nextInt(100));
 		}
 
 		@Override
