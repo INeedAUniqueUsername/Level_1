@@ -93,7 +93,7 @@ public class WhackAMole implements MouseListener {
 			String message = "";
 			for(int i = 0; i < missed*5; i++)
 			{
-				message = message + characterz[new Random().nextInt(26)];
+				message = message + characterz[new Random().nextInt(25)];
 			}
 			speak(message);
 		}
